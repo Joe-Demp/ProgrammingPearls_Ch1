@@ -5,6 +5,10 @@
 Bitmap::Bitmap(int len)
 {
 	length = len;
+
+	// Creating the array to store length number of objects
+	int numberOfElements = 1 + (length /  (8 * sizeof(char)));
+	mapPtr = new char[numberOfElements];
 }
 
 
@@ -22,14 +26,14 @@ bool Bitmap::remove(int index)
 	return false;
 }
 
-bool Bitmap::contains(int index)
+bool Bitmap::contains(int index) const
 {
 	return false;
 }
 
-bool & Bitmap::operator[](int index)
+int Bitmap::getSize() const
 {
-	// TODO: insert return statement here
+	return 0;
 }
 
 bool Bitmap::operator[](int index) const

@@ -6,7 +6,8 @@
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+    std::cout << "Hello World!\n";
+	std::cout << sizeof(char) << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

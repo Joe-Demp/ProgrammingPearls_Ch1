@@ -8,19 +8,22 @@ public:
 	~Bitmap();
 
 	//	add an int to the bitmap
-	void add(int index);
-	bool remove(int index);
-	bool contains(int index) const;
+	void add(int);
+	bool remove(int);
+	bool contains(int) const;
+
+	// size
+	int getSize() const;
 
 	// operator overloading
-	bool &operator[](int index);		// for modifiable l-values
-	bool operator[](int index) const;	// for constant r-values
+	bool operator[](int) const;	// for constant r-values
 
 private:
-	const int length;
+	int length;
 	int size;
 	char *mapPtr;
 
+	// private member functions to help with bit-manipulation
 	bool setBit(int bitIndex);
 	bool resetBit(int bitIndex);
 	char getMask(int bitIndex);
