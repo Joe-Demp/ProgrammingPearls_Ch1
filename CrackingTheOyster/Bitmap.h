@@ -8,7 +8,7 @@ public:
 	~Bitmap();
 
 	//	add an int to the bitmap
-	void add(int);
+	bool add(int);
 	bool remove(int);
 	bool contains(int) const;
 
@@ -22,6 +22,7 @@ private:
 	int length;
 	int size;
 	char *mapPtr;
+	const static char MASK = 1;
 
 	// private member functions to help with bit-manipulation
 	bool setBit(int bitIndex);
