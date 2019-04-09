@@ -33,6 +33,7 @@ bool Bitmap::add(int index)
 
 	// if the oldCopy AND the mask = 0, a value was added, return true
 	//	else no new value was added, return false
+	return false;
 }
 
 bool Bitmap::remove(int index)
