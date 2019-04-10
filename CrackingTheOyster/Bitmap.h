@@ -2,9 +2,9 @@
 class Bitmap
 {
 public:
-	static const int DEFAULT_SIZE = 100;
+	static const int DEFAULT_LENGTH = 100;
 
-	Bitmap(int = DEFAULT_SIZE);
+	Bitmap(int = DEFAULT_LENGTH);
 	~Bitmap();
 
 	//	add an int to the bitmap
@@ -14,6 +14,11 @@ public:
 
 	// size
 	int getSize() const;
+
+	// iterator function
+	char* begin();
+	char* end();
+
 
 	// operator overloading
 	bool operator[](int) const;	// for constant r-values

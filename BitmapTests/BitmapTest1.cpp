@@ -6,14 +6,27 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BitmapTests
 {		
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(BitmapTests1)
 	{
 	public:
-		
-		TEST_METHOD(TestMethod1)
+		// Makes sure an empty bitmap behaves normally 
+		TEST_METHOD(TestEmptyBitmap)
 		{
-			// TODO: Your test code here
+			Bitmap emptyBm = Bitmap();
+			Assert::AreEqual(0, emptyBm.getSize());
 		}
 
+		// Adds and removes entries of the Bitmap, checks the contains method and getSize
+		TEST_METHOD(TestAddRemove)
+		{
+			Bitmap bm = Bitmap();
+
+			Assert::IsTrue(bm.add(23));
+			Assert::IsTrue(bm.add(57));
+			Assert::IsTrue(bm.add(99));
+			Assert::IsTrue(bm.add(1));
+
+			Assert::AreEqual(4, bm.getSize());
+		}
 	};
 }
