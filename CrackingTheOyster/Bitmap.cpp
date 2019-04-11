@@ -67,16 +67,6 @@ int Bitmap::getSize() const
 	return size;
 }
 
-char * Bitmap::begin()
-{
-	return mapPtr;
-}
-
-char * Bitmap::end()
-{
-	return mapPtr + length;
-}
-
 bool Bitmap::operator[](int index) const
 {
 	// get the correct index of the mapPtr

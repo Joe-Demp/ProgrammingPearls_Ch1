@@ -15,11 +15,6 @@ public:
 	// size
 	int getSize() const;
 
-	// iterator function
-	char* begin();
-	char* end();
-
-
 	// operator overloading
 	bool operator[](int) const;	// for constant r-values
 
